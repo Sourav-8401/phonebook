@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.table-container{
+  /* background-color: blue; */
+  border-radius: 10px;
+  overflow: hidden;
+  border: solid rgb(204 204 204 / 20%) 1px;
+}
+table{
+  border-collapse: collapse;
+  /* width: 100%; */
+}
+h1{
+  font-weight: 500;
+  /* font-family: ; */
+}
+td,th{
+  border: solid rgb(204 204 204 / 20%) 1px;
+  padding: 8px 30px;
+}
+.search_bar{
+  background: none;
+  border: 1px solid #cccccc8f;
+  margin: 10px 0 123px;
+  width: 600px;
+  height: 46px;
+  font-size: 19px;
+  font-style: none;
+  padding: 3px;
+  border-radius: 52px;
+}
+.search_bar:hover{
+  background-color: #303134;
+  border:none;
+}
+.search_bar:focus{
+  border:none;
+  /* background-color: aqua; */
+}
