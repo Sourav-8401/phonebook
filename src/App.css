@@ -4,6 +4,7 @@
   padding: 2rem;
   text-align: center;
 }
+
 .table-container{
   /* background-color: blue; */
   border-radius: 10px;
@@ -74,6 +75,7 @@ td,th{
   margin-bottom: 7rem;
   border-radius: 10px;
   width: fit-content;
+  width: -webkit-fit-content;
   overflow: hidden;
   border: solid rgb(204 204 204 / 20%) 1px;
 }
@@ -130,9 +132,9 @@ hr{
 }
 
 .adduser_main_container {
-  background-color: #303134;
+  background-color: #333538;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 12px;
 }
 .userInput {
   width: 616px;
@@ -141,7 +143,7 @@ hr{
   border-radius: 10px;
   border: 1px solid #bdbfc6f2;  
   background-color: #30313470;
-  height: 2rem;
+  height: 2.3rem;
 }
 .input_container {
   margin-left: 4rem;
@@ -150,6 +152,8 @@ label{
   display: flex;
   color: #e1e5efc4;
   font-size: 22px;
+  margin-top:1rem;
+  margin-bottom: 5px;
 }
 .add-user-dialog{
   position: fixed;
@@ -168,7 +172,7 @@ label{
   left: 0;
   width: 100vw;
   height: 100vh;
-  filter: blur(100px);
+  filter: opacity(0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,6 +220,7 @@ button.sortbtn {
   font-size: 24px;
   color: #cccccc8f;
   margin: 0px 3px 0 15px;
+  cursor: pointer;
 }
 .table_title{
   margin-left: 2px;

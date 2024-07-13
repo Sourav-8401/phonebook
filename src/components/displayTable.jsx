@@ -50,9 +50,9 @@ function DisplayTable({onSearchClick}) {
         <div className="left_btn_container">
         <span class="material-symbols-outlined">data_table</span>
         <p className="table_title">Table</p>
-        <span class="material-symbols-outlined fiter_icon">filter_list</span>
+        <span title="filter" class="material-symbols-outlined fiter_icon">filter_list</span>
         {/* <p>Filter</p> */}
-        <span class="material-symbols-outlined fiter_icon" onClick={onSearchClick}>search</span>
+        <span title="search" class="material-symbols-outlined fiter_icon" onClick={onSearchClick}>search</span>
         </div>
         <div className="right_btn_container">
         <Menu as="div" className="relative mx-2 inline-block text-left">

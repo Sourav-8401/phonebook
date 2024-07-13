@@ -1,23 +1,3 @@
-let sortedData = [{
-    "sn_no": 1,
-    "name": "John Doe",
-    "email": "johndoe@example.com",
-    "mobile_number": "+1234567890"
-  },
-  {
-    "sn_no": 2,
-    "name": "Jane Smith",
-    "email": "janesmith@example.com",
-    "mobile_number": "+1234567891"
-  },
-  {
-    "sn_no": 3,
-    "name": "Robert Brown",
-    "email": "robertbrown@example.com",
-    "mobile_number": "+1234567892"
-  }];
-
-
 export function binarySearch(users, targetName) {
     const normalizedTarget = targetName.toLowerCase().replace(/\s/g, '');
 
@@ -40,5 +20,3 @@ export function binarySearch(users, targetName) {
 
     return null; 
 }
-const result = binarySearch(sortedData,"jane smith");
-console.log("result is  : "+result.email);
