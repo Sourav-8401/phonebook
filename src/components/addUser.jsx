@@ -1,28 +1,37 @@
 import React, { useState } from "react";
-function AddUser(){
+function AddUser({onAddUser}){
 
-    const {newUserData, setNewUser} = useState({});
-    function returnUser(){
-        const name = document.getElementsByClassName("name");
-        const email = document.getElementsByClassName("email");
-        const contact = document.getElementsByClassName("contact");
-        const newuser = {name : name, email : email, mobile_number : contact};
-        setNewUser(newuser);
+    const [newUserData, setNewUserData] = useState({
+        name : "",
+        email : "",
+        mobile_number : ""
+    });    
+    function handleChange(e){
+        const {name , value} = e.target;
+        setNewUserData({...newUserData, [name]: value });
+    }
+    function handleAddUser(){
+        onAddUser(newUserData);
+        setNewUserData({
+            name : "",
+            email : "",
+            mobile_number : ""
+        })
     }
     return(<>
     <div className="adduser_main_container">
         <h1 className="adduser_heading">adduser</h1>
         <div className="input_container">
             <label htmlFor="Name">Name</label><br />
-            <input type="text" className="name userInput" id="Name" /><br />
+            <input type="text" name="name" value={newUserData.name} onChange={handleChange} className="name userInput" id="Name" /><br />
 
             <label htmlFor="Email">Email</label><br />
-            <input type="text" className="email userInput" id="Email" /><br />
+            <input type="text" name="email" value={newUserData.email} onChange={handleChange} className="email userInput" id="Email" /><br />
 
             <label htmlFor="contact">Contact no</label><br />  
-            <input type="text" className="contact userInput" id="contact" />
+            <input type="text" name="mobile_number" value={newUserData.mobile_number} onChange={handleChange} className="contact userInput" id="contact" />
         </div>
-        <button className="add_btn">Add</button>
+        <button className="add_btn" onClick={handleAddUser}>Add</button>
     </div>
     </>)
 }

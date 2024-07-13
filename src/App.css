@@ -22,43 +22,67 @@ td,th{
   border: solid rgb(204 204 204 / 20%) 1px;
   padding: 8px 30px;
 }
+.searchMainContainer{
+  display: flex;
+  justify-content: center;
+}
 .search_bar{
   background: none;
   border: 1px solid #cccccc8f;
-  width: 600px;
+  width: 555px;
   height: 46px;
   font-size: 19px;
   font-style: none;
-  padding: 3px;
+  padding-left: 45px;
   border-radius: 52px;
 }
 
-.search_bar:focus,
-.search_bar:focus-visible{
-  background-color: #303134;
-  border: none;
+.search_bar:focus-visible,
+.search_bar:focus{
+  border:none;
   outline: none;
-  height: 20rem;
-  border-radius: 27px;
 }
 .search-container {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #303134;
+  border: none;
+  outline: none;
+  width: fit-content;
+  height: 20rem;
+  border-radius: 27px;
 }
-
+.search_table{
+  margin-top: 5rem;
+  border-radius: 10px;
+  width: fit-content;
+  overflow: hidden;
+  border: solid rgb(204 204 204 / 20%) 1px;
+}
+hr{
+  margin:0;
+  width: 94%;
+  border:none;
+  background-color: #bdc1d65f; 
+  height: 1px; 
+}
 .search-icon {
   position: absolute;
-  left: 121px;
-  top: 13px;
-  pointer-events: none;
-  color: #cccccc; /* Prevents the icon from blocking input clicks */
+  left: 16px;
+  top: 16px;
+  font-size: 21px;
+  color: #cccccca6; /* Prevents the icon from blocking input clicks */
 }
-
+.suggest_search_icon{
+  font-size: 20px;
+  margin-right: 17px;
+  color: #cccccca6;
+}
 .adduser_heading {
   font-size: 58px;
-  /* line-height: 1.1; */
   margin: 0;
   margin-bottom: 2rem;
 }
@@ -67,20 +91,17 @@ td,th{
   background-color: rgb(35, 131, 226);
   font-weight: 500;
   padding: 8px 38px;
-  /* text-align: -webkit-right; */
-  /* display: flex; */
 }
 
 .adduser_main_container {
   background-color: #303134;
-  border-radius: 10px;
-  /* margin-top: 29rem;
-  margin-bottom: 15rem; */
+  border-radius: 20px;
   padding: 2rem;
 }
 .userInput {
   width: 616px;
   display: flex;
+  padding-left:12px;
   border-radius: 10px;
   border: 1px solid #bdbfc6f2;  
   background-color: #30313470;
@@ -96,12 +117,14 @@ label{
 }
 .add-user-dialog{
   position: fixed;
+  border-radius: 20px;
   top: 50%;
   left: 50%;
+  border: .7px solid #ffffff29;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: ease ;
+  box-shadow: 0 0px 32px rgba(0, 0, 0, .5);
+  transition: ease;
 }
 .blur-background {
   position: fixed;
@@ -120,4 +143,17 @@ label{
     border-radius: 25px;
     padding: 9px;
     width: 18rem;
+}
+.suggestMainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-top: 7px;
+  margin-left: 34px;
+}
+.suggestMainContainer p{
+  margin: 2px;
+  padding: 0;
+  float: left;
 }

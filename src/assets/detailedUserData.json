@@ -1,0 +1,394 @@
+[
+    {
+        "name": "Alice Johnson",
+        "email": "ajohnson123@example.com",
+        "number": "+1-555-1234",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 350
+    },
+    {
+        "name": "Bob Smith",
+        "email": "bob_smith@example.com",
+        "number": "+91-9876543210",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 200
+    },
+    {
+        "name": "Chen Wei",
+        "email": "cwei456@example.com",
+        "number": "+86-123456789",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 150
+    },
+    {
+        "name": "Diego Rossi",
+        "email": "drossi789@example.com",
+        "number": "+39-321654987",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 180
+    },
+    {
+        "name": "Emily Dupont",
+        "email": "edupont987@example.com",
+        "number": "+33-654987321",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 250
+    },
+    {
+        "name": "Fiona O'Brien",
+        "email": "fobrien321@example.com",
+        "number": "+1-555-5678",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 300
+    },
+    {
+        "name": "George Patel",
+        "email": "gpatel654@example.com",
+        "number": "+91-8765432109",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 220
+    },
+    {
+        "name": "Hua Li",
+        "email": "hli321@example.com",
+        "number": "+86-987654321",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 140
+    },
+    {
+        "name": "Isabella Bianchi",
+        "email": "ibianchi123@example.com",
+        "number": "+39-654987321",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 190
+    },
+    {
+        "name": "Jacques Laurent",
+        "email": "jlaurent654@example.com",
+        "number": "+33-321987654",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 260
+    },
+    {
+        "name": "Kevin Brown",
+        "email": "kbrown987@example.com",
+        "number": "+1-555-8765",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 320
+    },
+    {
+        "name": "Lila Kumar",
+        "email": "lkumar321@example.com",
+        "number": "+91-7654321098",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 240
+    },
+    {
+        "name": "Mei Zhang",
+        "email": "mzhang987@example.com",
+        "number": "+86-654321987",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 130
+    },
+    {
+        "name": "Nico Romano",
+        "email": "nromano321@example.com",
+        "number": "+39-987654321",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 200
+    },
+    {
+        "name": "Olivia Martin",
+        "email": "omartin123@example.com",
+        "number": "+33-987321654",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 270
+    },
+    {
+        "name": "Patrick Lee",
+        "email": "plee654@example.com",
+        "number": "+1-555-2345",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 340
+    },
+    {
+        "name": "Qiang Wu",
+        "email": "qwu321@example.com",
+        "number": "+86-321987654",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 160
+    },
+    {
+        "name": "Raj Singh",
+        "email": "rsingh987@example.com",
+        "number": "+91-6543210987",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 260
+    },
+    {
+        "name": "Sophie Dubois",
+        "email": "sdubois321@example.com",
+        "number": "+33-123654987",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 280
+    },
+    {
+        "name": "Tom Hanks",
+        "email": "thanks123@example.com",
+        "number": "+1-555-3456",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 360
+    },
+    {
+        "name": "Uma Sharma",
+        "email": "usharma654@example.com",
+        "number": "+91-5432109876",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 280
+    },
+    {
+        "name": "Victor Chen",
+        "email": "vchen987@example.com",
+        "number": "+86-987123654",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 120
+    },
+    {
+        "name": "Walter Ricci",
+        "email": "wricci321@example.com",
+        "number": "+39-321654987",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 210
+    },
+    {
+        "name": "Xiao Li",
+        "email": "xli987@example.com",
+        "number": "+86-654987321",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 170
+    },
+    {
+        "name": "Yash Verma",
+        "email": "yverma123@example.com",
+        "number": "+91-4321098765",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 300
+    },
+    {
+        "name": "Zara Fernandez",
+        "email": "zfernandez654@example.com",
+        "number": "+33-876543210",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 290
+    },
+    {
+        "name": "Adam Miller",
+        "email": "amiller321@example.com",
+        "number": "+1-555-4567",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 370
+    },
+    {
+        "name": "Bella Singh",
+        "email": "bsingh987@example.com",
+        "number": "+91-3210987654",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 320
+    },
+    {
+        "name": "Celine Tan",
+        "email": "ctan321@example.com",
+        "number": "+86-987321654",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 180
+    },
+    {
+        "name": "Daniele Russo",
+        "email": "drusso987@example.com",
+        "number": "+39-654321987",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 220
+    },
+    {
+        "name": "Ella Durand",
+        "email": "edurand654@example.com",
+        "number": "+33-321654987",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 300
+    },
+    {
+        "name": "Finn McCarthy",
+        "email": "fmccarthy987@example.com",
+        "number": "+1-555-5678",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 390
+    },
+    {
+        "name": "Grace Patel",
+        "email": "gpatel321@example.com",
+        "number": "+91-2109876543",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 340
+    },
+    {
+        "name": "Huan Liu",
+        "email": "hliu987@example.com",
+        "number": "+86-321654987",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 190
+    },
+    {
+        "name": "Ivan Bianchi",
+        "email": "ibianchi654@example.com",
+        "number": "+39-987654321",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 230
+    },
+    {
+        "name": "Julie Martin",
+        "email": "jmartin987@example.com",
+        "number": "+33-654321987",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 310
+    },
+    {
+        "name": "Karl Brown",
+        "email": "kbrown321@example.com",
+        "number": "+1-555-6789",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 400
+    },
+    {
+        "name": "Liam Gupta",
+        "email": "lgupta987@example.com",
+        "number": "+91-1098765432",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 360
+    },
+    {
+        "name": "Ming Zhao",
+        "email": "mzhao654@example.com",
+        "number": "+86-987654321",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 200
+    },
+    {
+        "name": "Nina Gallo",
+        "email": "ngallo321@example.com",
+        "number": "+39-321987654",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 240
+    },
+    {
+        "name": "Oscar Dubois",
+        "email": "odubois987@example.com",
+        "number": "+33-987321654",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 320
+    },
+    {
+        "name": "Paul Walker",
+        "email": "pwalker321@example.com",
+        "number": "+1-555-7890",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 420
+    },
+    {
+        "name": "Riya Desai",
+        "email": "rdesai987@example.com",
+        "number": "+91-0987654321",
+        "country_code": "+91",
+        "category": "college",
+        "call_duration": 380
+    },
+    {
+        "name": "Sara Wong",
+        "email": "swong321@example.com",
+        "number": "+86-654987321",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 210
+    },
+    {
+        "name": "Tony De Luca",
+        "email": "tdeLuca987@example.com",
+        "number": "+39-987321654",
+        "country_code": "+39",
+        "category": "pep_class",
+        "call_duration": 250
+    },
+    {
+        "name": "Uma Roberts",
+        "email": "uroberts321@example.com",
+        "number": "+33-321654987",
+        "country_code": "+33",
+        "category": "favorite",
+        "call_duration": 330
+    },
+    {
+        "name": "Victor Lee",
+        "email": "vlee987@example.com",
+        "number": "+1-555-8901",
+        "country_code": "+1",
+        "category": "family",
+        "call_duration": 440
+    },
+    {
+        "name": "Wang Mei",
+        "email": "wmei321@example.com",
+        "number": "+86-321987654",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 220
+    },
+    {
+        "name": "Xing Zhao",
+        "email": "xzhao987@example.com",
+        "number": "+86-654321987",
+        "country_code": "+86",
+        "category": "school",
+        "call_duration": 230
+    }
+]

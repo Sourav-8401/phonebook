@@ -1,24 +1,24 @@
 import userdata from "../assets/userdata.json";
 import React, { useEffect, useState, useRef } from "react";
-import sortData from "./sortData";
+import sortData from "./algorithm/sortData";
 import AddUser from "./addUser";
-function UserTable() {
+function DisplayTable() {
   const [sortedData, setSortedData] = useState([]);
   const [showData, setShowData] = useState(userdata.phonebook);
-  const [showAddUser, setShowAddUser] = useState(false);
+  const [addUserDialog, setAddUserDialog] = useState(false);
   const dialogRef = useRef(null);
   useEffect(() => {
-    const sorted = sortData("name");
+    const sorted = sortData( showData, "name");
     setSortedData(sorted);
   }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (dialogRef.current && !dialogRef.current.contains(event.target)) {
-        setShowAddUser(false);
+        setAddUserDialog(false);
       }
     }
-    if (showAddUser) {
+    if (addUserDialog) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -26,22 +26,28 @@ function UserTable() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showAddUser]);
+  }, [addUserDialog]);
 
   function dosort() {
-    setShowData(sortedData);
+    const sorted = sortData(showData, "name");
+    setShowData(sorted);
   }
 
   function toggleAddUser() {
-    setShowAddUser(!showAddUser);
+    setAddUserDialog(!addUserDialog);
   }
 
+  function handleAddUser(newUser){
+    setShowData([...showData, newUser]);
+    
+    setAddUserDialog(false);
+  }
   return (
     <>
         <button onClick={dosort} className="sortbtn">Sort</button>
         <button onClick={toggleAddUser} className="addbtn">Add</button>
 
-      <div className={showAddUser ? "blur-background" : ""}>
+      <div className={addUserDialog ? "blur-background" : ""}>
         <div className="table-container">
           <table>
             <thead>
@@ -65,12 +71,12 @@ function UserTable() {
           </table>
         </div>
         </div>
-        {showAddUser && (
+        {addUserDialog && (
           <div ref={dialogRef} className="add-user-dialog">
-            <AddUser />
+            <AddUser onAddUser={handleAddUser} />
           </div>
         )}
     </>
   );
 }
-export default UserTable;
+export default DisplayTable;
