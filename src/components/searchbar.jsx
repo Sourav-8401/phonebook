@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { binarySearch } from "./algorithm/search";
 import userdata from "../assets/userdata.json";
 import sortData from "./algorithm/sortData";
+
 function Searchbar() {
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);

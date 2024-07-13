@@ -138,11 +138,31 @@ label{
   justify-content: center;
   z-index: 999; /* Make sure it is on top of other elements */
 }
+button.sortbtn {
+  margin-right: 4px;
+}
 .sortbtn , .addbtn{
-  margin: 9rem 1rem;
-    border-radius: 25px;
-    padding: 9px;
-    width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+  border-radius: 9px;
+  padding: 3px;
+  width: 7rem;
+}
+.sortbtn p, .addbtn p{
+  border-right: 2px solid #ffffffad;
+  margin-right: 9px;
+  padding: 0;
+  margin: 0px 3px 0 0;
+}
+.btn_mainContainer {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: wrap;
 }
 .suggestMainContainer{
   display: flex;
