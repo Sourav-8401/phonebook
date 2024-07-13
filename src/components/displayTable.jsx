@@ -9,10 +9,10 @@ function DisplayTable() {
   const [showData, setShowData] = useState(userdata.phonebook);
   const [addUserDialog, setAddUserDialog] = useState(false);
   const dialogRef = useRef(null);
-  useEffect(() => {
-    const sorted = sortData(showData, "name");
-    setSortedData(sorted);
-  }, []);
+  // useEffect(() => {
+  //   const sorted = sortData(showData, "name");
+  //   setSortedData(sorted);
+  // }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -30,8 +30,8 @@ function DisplayTable() {
     };
   }, [addUserDialog]);
 
-  function dosort() {
-    const sorted = sortData(showData, "name");
+  function dosort(key) {
+    const sorted = sortData(showData, key);
     setShowData(sorted);
   }
 
@@ -47,24 +47,32 @@ function DisplayTable() {
   return (
     <>
       <div className="btn_mainContainer">
-      <Menu as="div" className="relative mx-2 inline-block text-left">
+        <div className="left_btn_container">
+        <span class="material-symbols-outlined">data_table</span>
+        <p className="table_title">Table</p>
+        <span class="material-symbols-outlined fiter_icon">filter_list</span>
+        {/* <p>Filter</p> */}
+        <span class="material-symbols-outlined fiter_icon">search</span>
+        </div>
+        <div className="right_btn_container">
+        <Menu as="div" className="relative mx-2 inline-block text-left">
       <div>
-        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md  px-4 py-2  text-sm font-semibold text-white shadow-sm   hover:bg-sky-600">
+        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md focus:outline-none px-4 py-1.5  text-sm font-semibold text-white shadow-sm bg-zinc-700  ">
           Sort
-          <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5  border- text-white" />
+          <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5   text-white" />
         </MenuButton>
       </div>
 
       <MenuItems
         transition
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-zinc-600 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <div className="py-1">
           <MenuItem>
             <a
               href="#"
-              onClick={dosort}
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              onClick={()=>dosort("name")}
+              className="block px-4 py-2 text-sm text-white data-[focus]:bg-zinc-700 data-[focus]:text-white"
             >
               Name
             </a>
@@ -72,7 +80,8 @@ function DisplayTable() {
           <MenuItem>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              onClick={()=>dosort("email")}
+              className="block px-4 py-2 text-sm text-white data-[focus]:bg-zinc-700 data-[focus]:text-white"
             >
               Email
             </a>
@@ -80,7 +89,8 @@ function DisplayTable() {
           <MenuItem>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              onClick={()=>dosort("contact")}
+              className="block px-4 py-2 text-sm text-white data-[focus]:bg-zinc-700 data-[focus]:text-white"
             >
               Contact
             </a>
@@ -91,17 +101,13 @@ function DisplayTable() {
       </MenuItems>
     </Menu>
 
-
-        {/* <button onClick={dosort} className="sortbtn">
-          <p>Sort</p>
-          <span class="material-symbols-outlined drop_down_icon">
-            keyboard_arrow_down
-          </span>
-        </button> */}
-        <button onClick={toggleAddUser} className="addbtn">
+        <button onClick={toggleAddUser} className="addbtn inline-flex focus:outline-none justify-center gap-x-1.5 rounded-md  px-4 py-1  text-sm font-semibold text-white  ">
           <p>Add</p>
           <span class="material-symbols-outlined">add</span>
         </button>
+
+        </div>
+
       </div>
       <div className={addUserDialog ? "blur-background" : ""}>
         <div className="table-container">

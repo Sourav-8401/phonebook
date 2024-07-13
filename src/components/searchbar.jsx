@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { binarySearch } from "./algorithm/search";
 import userdata from "../assets/userdata.json";
 import sortData from "./algorithm/sortData";
@@ -7,8 +7,9 @@ function Searchbar() {
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [suggestedUsers, setSuggestedUsers] = useState([]);
-
+  const [searchToggle, setSearchToggle] = useState(false);
   const sortedData = sortData(userdata.phonebook, "name");
+  const searchContainerRef = useRef(null);
 
   const getFilteredUsers = (input) => {
     if (!input.trim()) {
@@ -16,13 +17,11 @@ function Searchbar() {
       return;
     }
 
-    // Filter users whose names start with input (case insensitive)
     const filteredUsers = userdata.phonebook.filter((user) =>
       user.name.toLowerCase().startsWith(input.toLowerCase())
     );
 
-    // Limit to 6 suggestions
-    setSuggestedUsers(filteredUsers.slice(0, 6));
+    setSuggestedUsers(filteredUsers.slice(0, 8));
   };
 
   const handleInputChange = (event) => {
@@ -33,53 +32,83 @@ function Searchbar() {
     setSearchResults(results ? [results] : []);
   };
 
+  const handleSearchToggle = () => {
+    setSearchToggle(true);
+  };
+
+  const handleClickOutside = (event) => {
+    if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+      setSearchToggle(false);
+      setSearchInput("");
+      setSuggestedUsers([]);  
+      // setSearchResults([]);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <h1>Phonebook</h1>
       <div className="searchMainContainer">
-        <div className="search-container">
+        <div
+          ref={searchContainerRef}
+          className={searchToggle ? "search-container" : "search-container_toggle"}
+        >
           <span className="material-symbols-outlined search-icon">search</span>
           <input
             className="search_bar"
             type="text"
+            onClick={handleSearchToggle}
             value={searchInput}
             onChange={handleInputChange}
           />
           <hr />
           <div className="suggestMainContainer">
-            {suggestedUsers.map((user) => (         
-                <p><span className="material-symbols-outlined suggest_search_icon">search</span>{user.name}</p>
+            {suggestedUsers.map((user) => (
+              <p key={user.name}>
+                <span className="material-symbols-outlined suggest_search_icon">search</span>
+                {user.name}
+              </p>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="search_table">
         {searchResults.length > 0 ? (
+          <>
+          <p className="search_title">Search result...</p>
+        <div className="search_table">
           <table>
             <thead>
               <tr>
-                <th>S.NO</th>
-                <th>NAME</th>
-                <th>EMAIL</th>
-                <th>CONTACT NO.</th>
+                <th className="s_td_sno">S.NO</th>
+                <th className="s_td_name">NAME</th>
+                <th className="s_td_email">EMAIL</th>
+                <th className="s_td_contact">CONTACT NO.</th>
               </tr>
             </thead>
             <tbody>
               {searchResults.map((user, index) => (
                 <tr key={user["sn.no"]}>
-                  <td>{index + 1} </td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.mobile_number}</td>
+                  <td className="s_td_sno">{index + 1}</td>
+                  <td className="s_td_name">{user.name}</td>
+                  <td className="s_td_email">{user.email}</td>
+                  <td className="s_td_contact">{user.mobile_number}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
+          </>
         ) : (
           ""
         )}
-      </div>
     </>
   );
 }

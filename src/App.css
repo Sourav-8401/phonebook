@@ -8,7 +8,7 @@
   /* background-color: blue; */
   border-radius: 10px;
   overflow: hidden;
-  border: solid rgb(204 204 204 / 20%) 1px;
+  /* border: solid rgb(204 204 204 / 20%) 1px; */
 }
 table{
   border-collapse: collapse;
@@ -22,11 +22,12 @@ td,th{
   border: solid rgb(204 204 204 / 20%) 1px;
   padding: 8px 30px;
 }
-.searchMainContainer{
+.searchMainContainer {
   display: flex;
   justify-content: center;
 }
-.search_bar{
+
+.search_bar {
   background: none;
   border: 1px solid #cccccc8f;
   width: 555px;
@@ -38,29 +39,60 @@ td,th{
 }
 
 .search_bar:focus-visible,
-.search_bar:focus{
-  border:none;
+.search_bar:focus {
+  border: none;
   outline: none;
 }
+
+.search-container_toggle {
+  height: 55px;
+  position: relative;
+  margin-top: 2rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .search-container {
   position: relative;
   display: flex;
   align-items: center;
-  display: flex;
   flex-direction: column;
   background-color: #303134;
   border: none;
+  margin-top: 2rem;
   outline: none;
+  width: -moz-fit-content;
   width: fit-content;
-  height: 20rem;
+  height: 19rem;
   border-radius: 27px;
 }
-.search_table{
-  margin-top: 5rem;
+
+.search_table {
+  margin-top: 1rem;
+  margin-bottom: 7rem;
   border-radius: 10px;
   width: fit-content;
   overflow: hidden;
   border: solid rgb(204 204 204 / 20%) 1px;
+}
+
+.s_td_sno{
+  width: 98.89px;
+  height: 40.8px;
+}
+.s_td_name{
+  width: 222.79px;
+  height: 40.8px;
+}
+.s_td_email{
+  width: 321.5px;
+  height: 40.8px;
+}
+.s_td_contact{
+  width: 166.89px;
+  height: 40.8px;
 }
 hr{
   margin:0;
@@ -69,10 +101,13 @@ hr{
   background-color: #bdc1d65f; 
   height: 1px; 
 }
+.search_title{
+  margin-top: 5rem;
+}
 .search-icon {
   position: absolute;
   left: 16px;
-  top: 16px;
+  top: 14px;
   font-size: 21px;
   color: #cccccca6; /* Prevents the icon from blocking input clicks */
 }
@@ -146,21 +181,14 @@ button.sortbtn {
   justify-content: center;
   align-items: center;
   margin: 1rem 0rem;
-  border-radius: 9px;
   padding: 3px;
-  width: 7rem;
 }
-.sortbtn p, .addbtn p{
-  border-right: 2px solid #ffffffad;
-  margin-right: 9px;
-  padding: 0;
-  margin: 0px 3px 0 0;
-}
+
 .btn_mainContainer {
   display: flex;
-  margin: 0;
+  margin-top: 6rem;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
 }
@@ -176,4 +204,18 @@ button.sortbtn {
   margin: 2px;
   padding: 0;
   float: left;
+}
+
+.left_btn_container{
+  display: flex;
+  color: rgba(202, 202, 202, 0.92);
+  font-weight: 500;
+}
+.fiter_icon{
+  font-size: 24px;
+  color: #cccccc8f;
+  margin: 0px 3px 0 15px;
+}
+.table_title{
+  margin-left: 2px;
 }
