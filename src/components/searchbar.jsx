@@ -1,15 +1,22 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, forwardRef, useEffect, useImperativeHandle } from "react";
 import { binarySearch } from "./algorithm/search";
 import userdata from "../assets/userdata.json";
 import sortData from "./algorithm/sortData";
 
-function Searchbar() {
+const Searchbar = forwardRef((props, ref) =>{
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [suggestedUsers, setSuggestedUsers] = useState([]);
   const [searchToggle, setSearchToggle] = useState(false);
   const sortedData = sortData(userdata.phonebook, "name");
   const searchContainerRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useImperativeHandle(ref,()=>({
+    focus : ()=>{
+      inputRef.current.focus();
+    },
+  }));
 
   const getFilteredUsers = (input) => {
     if (!input.trim()) {
@@ -63,8 +70,9 @@ function Searchbar() {
           <span className="material-symbols-outlined search-icon">search</span>
           <input
             className="search_bar"
+            ref={inputRef}
             type="text"
-            onClick={handleSearchToggle}
+            onFocus={handleSearchToggle}
             value={searchInput}
             onChange={handleInputChange}
           />
@@ -111,6 +119,6 @@ function Searchbar() {
         )}
     </>
   );
-}
+});
 
 export default Searchbar;

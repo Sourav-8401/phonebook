@@ -100,6 +100,7 @@ hr{
   border:none;
   background-color: #bdc1d65f; 
   height: 1px; 
+  z-index: 1000;
 }
 .search_title{
   margin-top: 5rem;

@@ -4,7 +4,7 @@ import sortData from "./algorithm/sortData";
 import AddUser from "./addUser";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-function DisplayTable() {
+function DisplayTable({onSearchClick}) {
   const [sortedData, setSortedData] = useState([]);
   const [showData, setShowData] = useState(userdata.phonebook);
   const [addUserDialog, setAddUserDialog] = useState(false);
@@ -52,7 +52,7 @@ function DisplayTable() {
         <p className="table_title">Table</p>
         <span class="material-symbols-outlined fiter_icon">filter_list</span>
         {/* <p>Filter</p> */}
-        <span class="material-symbols-outlined fiter_icon">search</span>
+        <span class="material-symbols-outlined fiter_icon" onClick={onSearchClick}>search</span>
         </div>
         <div className="right_btn_container">
         <Menu as="div" className="relative mx-2 inline-block text-left">

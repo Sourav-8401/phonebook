@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useRef, useState } from 'react'
+import React from 'react'
 import './App.css'
 import Searchbar from './components/searchbar'
 import DisplayTable from './components/displayTable'
 import AddUser from './components/addUser'
 function App() {
+  const searchInput = useRef(null);
+
+  const handleSearchClick = ()=>{
+    if(searchInput.current){
+      searchInput.current.focus();
+    }
+  };
+
 
   return (<>
-    <Searchbar ></Searchbar>
-     <DisplayTable></DisplayTable>
+    <Searchbar ref={searchInput}></Searchbar>
+     <DisplayTable onSearchClick={handleSearchClick}></DisplayTable>
     </>
   )
 }
