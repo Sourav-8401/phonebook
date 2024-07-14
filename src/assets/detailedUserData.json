@@ -364,7 +364,7 @@
     {
       "name": "Jany",
       "email": "tdeLuca987@example.com",
-      "mobile_number": "+39-987321654",
+      "mobile_number": "+39987321654",
       "country_code": "+39",
       "category": "pep_class",
       "call_duration": "250s"

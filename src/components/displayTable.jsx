@@ -140,14 +140,15 @@ function DisplayTable({ onSearchClick, onFilterToggle, combineAction}) {
                     Family
                   </a>
                 </MenuItem>
+
                 <form action="#" method="POST"></form>
               </div>
             </MenuItems>
           </Menu>
 
-          <span onClick={reverseInvert} class="material-symbols-outlined reverse_icon hover:text-cyan-50" title="Reverse">
+          {/* <span onClick={reverseInvert} class="material-symbols-outlined reverse_icon hover:text-cyan-50" title="Reverse">
           swap_vert
-          </span>
+          </span> */}
           <span
             title="search"
             class="material-symbols-outlined fiter_icon"
@@ -209,6 +210,15 @@ function DisplayTable({ onSearchClick, onFilterToggle, combineAction}) {
                   >
                     Duration
                   </a>  
+                </MenuItem>
+                                <MenuItem>
+                  <a
+                    href="#"
+                    onClick={reverseInvert}
+                    className="block px-4 py-2 text-sm text-white data-[focus]:bg-zinc-700 data-[focus]:text-white"
+                  >
+                    A to Z <span onClick={reverseInvert} class="material-symbols-outlined text-lg hover:text-cyan-50" title="Reverse">swap_vert</span>
+                  </a>
                 </MenuItem>
                 <form action="#" method="POST"></form>
               </div>
