@@ -19,7 +19,7 @@ function AddUser({onAddUser}){
         })
     }
     return(<>
-    <div className="adduser_main_container">
+    <div  className="adduser_main_container">
         <h1 className="adduser_heading">adduser</h1>
         <div className="input_container">
             <label htmlFor="Name">Name</label>

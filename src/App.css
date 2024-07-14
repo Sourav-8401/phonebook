@@ -222,6 +222,17 @@ button.sortbtn {
   margin: 0px 3px 0 15px;
   cursor: pointer;
 }
+.reverse_icon{
+  font-size: 24px;
+  color: #cccccc8f;
+  margin: 0px 3px 0 15px;
+  cursor: pointer;
+}
 .table_title{
   margin-left: 2px;
+}
+
+.filterMenuBtn:hover {
+  border: none;
+  outline: none;
 }

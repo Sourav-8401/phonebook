@@ -1,6 +1,8 @@
 import React, { useState, useRef, forwardRef, useEffect, useImperativeHandle } from "react";
-import { binarySearch } from "./algorithm/search";
+import { binarySearch } from "./algorithm/binarysearch";
+import { sorted_matching , unsorted_matching } from "./algorithm/stringMatching";
 import userdata from "../assets/userdata.json";
+import detailedUserData from "../assets/detailedUserData.json"
 import sortData from "./algorithm/sortData";
 
 const Searchbar = forwardRef((props, ref) =>{
@@ -8,7 +10,7 @@ const Searchbar = forwardRef((props, ref) =>{
   const [searchResults, setSearchResults] = useState([]);
   const [suggestedUsers, setSuggestedUsers] = useState([]);
   const [searchToggle, setSearchToggle] = useState(false);
-  const sortedData = sortData(userdata.phonebook, "name");
+  const sortedData = sortData(detailedUserData.phonebook, "name");
   const searchContainerRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -23,11 +25,7 @@ const Searchbar = forwardRef((props, ref) =>{
       setSuggestedUsers([]);
       return;
     }
-
-    const filteredUsers = userdata.phonebook.filter((user) =>
-      user.name.toLowerCase().startsWith(input.toLowerCase())
-    );
-
+    const filteredUsers = sorted_matching(sortedData, input, "name");
     setSuggestedUsers(filteredUsers.slice(0, 8));
   };
 
@@ -36,7 +34,8 @@ const Searchbar = forwardRef((props, ref) =>{
     getFilteredUsers(inputValue);
     setSearchInput(inputValue);
     const results = binarySearch(sortedData, inputValue.trim());
-    setSearchResults(results ? [results] : []);
+    console.log(results[1]);
+    setSearchResults(results[0] ? [results[0]] : []);
   };
 
   const handleSearchToggle = () => {
@@ -48,7 +47,6 @@ const Searchbar = forwardRef((props, ref) =>{
       setSearchToggle(false);
       setSearchInput("");
       setSuggestedUsers([]);  
-      // setSearchResults([]);
     }
   };
 
@@ -79,9 +77,9 @@ const Searchbar = forwardRef((props, ref) =>{
           <hr />
           <div className="suggestMainContainer">
             {suggestedUsers.map((user) => (
-              <p key={user.name}>
+              <p key={user}>
                 <span className="material-symbols-outlined suggest_search_icon">search</span>
-                {user.name}
+                {user}
               </p>
             ))}
           </div>
