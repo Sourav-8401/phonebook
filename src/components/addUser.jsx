@@ -4,14 +4,29 @@ function AddUser({onAddUser}){
     const [newUserData, setNewUserData] = useState({
         name : "",
         email : "",
-        mobile_number : ""
+        mobile_number : "",
+        country_code : "+91",
+        category : "null",
+        call_duration : "0"
     });    
     function handleChange(e){
         const {name , value} = e.target;
         setNewUserData({...newUserData, [name]: value });
     }
     function handleAddUser(){
-        onAddUser(newUserData);
+        const {name , email, mobile_number} = newUserData;
+        if(!name){
+            alert("Please enter Name");
+            return;
+        }else if(!email){
+            alert("Please enter Email");
+            return;
+        }else if(!mobile_number){
+            alert("Please enter Contact Number");
+            return;
+        }
+        onAddUser(newUserData); 
+        alert("ADDED");
         setNewUserData({
             name : "",
             email : "",
