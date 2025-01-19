@@ -1,4 +1,3 @@
-import userdata from "../../assets/userdata.json";
 const quickSort = (array, key) => {
   if (array.length <= 1) {
     return array;

@@ -120,40 +120,40 @@ hr{
   color: #cccccca6;
 }
 .adduser_heading {
-  font-size: 58px;
-  margin: 0;
-  margin-bottom: 2rem;
+  font-size: 30px;
+  margin: 1rem 1rem;
+  float: left;
+  font-weight: 500;
 }
 .add_btn {
-  margin: 46px 0px 0 39rem;
   background-color: rgb(35, 131, 226);
   font-weight: 500;
   padding: 8px 38px;
+  margin: 1rem 0rem;
 }
 
 .adduser_main_container {
-  background-color: #333538;
-  border-radius: 20px;
-  padding: 12px;
+  /* background-color: #333538;
+  border-radius: 20px; */
 }
 .userInput {
   width: 616px;
   display: flex;
   padding-left:12px;
   border-radius: 10px;
-  border: 1px solid #bdbfc6f2;  
+  border: 1px solid #bdbfc66f;  
   background-color: #30313470;
   height: 2.3rem;
 }
 .input_container {
-  margin-left: 4rem;
+  padding: 1rem 1rem;
 }
 label{
   display: flex;
-  color: #e1e5efc4;
-  font-size: 22px;
-  margin-top:1rem;
-  margin-bottom: 5px;
+      font-weight: 200;
+      color: #e1e5efc4;
+      font-size: 19px;
+      margin: 1rem 0px 8px 3px;
 }
 .add-user-dialog{
   position: fixed;
@@ -165,6 +165,7 @@ label{
   z-index: 1000;
   box-shadow: 0 0px 32px rgba(0, 0, 0, .5);
   transition: ease;
+  background-color: #333538;
 }
 .blur-background {
   position: fixed;
@@ -235,4 +236,10 @@ button.sortbtn {
 .filterMenuBtn:hover {
   border: none;
   outline: none;
+}
+.hr_option{
+  outline: #fff;
+  height: 1px;
+  min-width: -webkit-fill-available;
+  color: white;
 }

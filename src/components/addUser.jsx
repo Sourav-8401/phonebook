@@ -35,16 +35,14 @@ function AddUser({onAddUser}){
     }
     return(<>
     <div  className="adduser_main_container">
-        <h1 className="adduser_heading">adduser</h1>
+        <h1 className="adduser_heading">Create new user</h1>
+        <hr className="hr_option"/>
         <div className="input_container">
-            <label htmlFor="Name">Name</label>
-            <input type="text" name="name" value={newUserData.name} onChange={handleChange} className="name userInput" id="Name" />
+            <input type="text" name="name" placeholder="Enter your name..." value={newUserData.name} onChange={handleChange} className="name userInput" id="Name" />
 
-            <label htmlFor="Email">Email</label>
-            <input type="text" name="email" value={newUserData.email} onChange={handleChange} className="email userInput" id="Email" />
+            <input type="text" name="email" placeholder="Enter your email..." value={newUserData.email} onChange={handleChange} className="email userInput" id="Email" />
 
-            <label htmlFor="contact">Contact no</label> 
-            <input type="text" name="mobile_number" value={newUserData.mobile_number} onChange={handleChange} className="contact userInput" id="contact" />
+            <input type="text" name="mobile_number" placeholder="Enter your mobile number..." value={newUserData.mobile_number} onChange={handleChange} className="contact userInput" id="contact" />
         </div>
         <button className="add_btn" onClick={handleAddUser}>Add</button>
     </div>

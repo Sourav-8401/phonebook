@@ -1,4 +1,3 @@
-import userdata from "../assets/userdata.json";
 import React, { useEffect, useState, useRef } from "react";
 import sortData from "./algorithm/sortData";
 import AddUser from "./addUser";
@@ -252,8 +251,20 @@ function DisplayTable({ onSearchClick, onFilterToggle, combineAction}) {
                 <tr key={user.name}>
                   <td>{index + 1} </td>
                   <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.mobile_number}</td>
+                  <td>
+                    {
+                      user.email.length > 35 ?
+                      (<a href={user.email}>Published link</a>)
+                      : (user.email)
+                    }
+                  </td>
+                  <td> 
+                    {
+                      user.mobile_number.length > 35 ?
+                      (<a href={user.mobile_number}>Own link</a>):(user.mobile_number)
+
+                    }
+                  </td>
                   {toggleView && <td>{user.category}</td>}
                   {toggleView && <td>{user.call_duration}</td>}
                 </tr>

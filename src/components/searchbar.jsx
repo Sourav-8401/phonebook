@@ -1,7 +1,6 @@
 import React, { useState, useRef, forwardRef, useEffect, useImperativeHandle } from "react";
 import { binarySearch } from "./algorithm/binarysearch";
 import { sorted_matching , unsorted_matching } from "./algorithm/stringMatching";
-import userdata from "../assets/userdata.json";
 import detailedUserData from "../assets/detailedUserData.json"
 import sortData from "./algorithm/sortData";
 
